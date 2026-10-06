@@ -74,6 +74,13 @@ void MapReader1800::read_tileset(BinaryFile& mapfile)
     tilesetwidths = new short[iMaxTilesetID + 1];
     tilesetheights = new short[iMaxTilesetID + 1];
 
+    //IDs missing from the table are treated as unknown tilesets
+    for (short iID = 0; iID <= iMaxTilesetID; iID++) {
+        translationid[iID] = TILESETUNKNOWN;
+        tilesetwidths[iID] = 1;
+        tilesetheights[iID] = 1;
+    }
+
     for (short iTileset = 0; iTileset < iNumTilesets; iTileset++) {
         short iID = translation[iTileset].iID;
         translationid[iID] = g_tilesetmanager->indexFromName(translation[iTileset].szName);
