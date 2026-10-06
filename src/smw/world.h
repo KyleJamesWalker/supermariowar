@@ -216,10 +216,10 @@ private:
     std::vector<WorldVehicle> vehicles;
     std::vector<WorldWarp> warps;
 
-    short iNumInitialBonuses;
+    short iNumInitialBonuses = 0;
     short iInitialBonuses[32];
 
-    WorldMusicCategory iMusicCategory;
+    WorldMusicCategory iMusicCategory {};
 
     short iTileSize;
     short iTileSizeShift;
