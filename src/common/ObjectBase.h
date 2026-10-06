@@ -101,5 +101,5 @@ protected:
     short state = 0;
     bool dead = false;
 
-    int iNetworkID = 0;  // TODO: remove, unused
+    int iNetworkID = 0;  // never assigned, but the AI keys attentionObjects on it
 };
