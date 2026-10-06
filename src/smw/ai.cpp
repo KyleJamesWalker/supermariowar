@@ -84,6 +84,8 @@ extern CGameValues game_values;
 
 CPlayerAI::CPlayerAI()
 {
+    iFallDanger = 0;
+
     currentAttentionObject.iID = -1;
     currentAttentionObject.iType = 0;
     currentAttentionObject.iTimer = 0;
